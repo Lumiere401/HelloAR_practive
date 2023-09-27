@@ -3,27 +3,7 @@ guid: b7a3e48f904ca42b7a034b8e9e06d21f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: IDP_Pot
-    second: {fileID: 2100000, guid: e478020fcb0e44718a1fb3af8863b7ea, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: IDP_ground
-    second: {fileID: 2100000, guid: 6b3fa9ae68b044790bcaab1ee05a00cd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: IDP_leaves
-    second: {fileID: 2100000, guid: 21beb42e64cbb429c9d2810bbc3499e5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: IDP_root
-    second: {fileID: 2100000, guid: 94c0caa4ea7ef43e59cd10b205bbfeae, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

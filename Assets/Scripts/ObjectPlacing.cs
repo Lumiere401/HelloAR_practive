@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -9,9 +11,13 @@ public class ObjectPlacing : MonoBehaviour
 {
     [SerializeField]
     private GameObject prefab;
+    [SerializeField]
+    private Camera arCamera;
     private ARPlaneManager planeManager;
     private ARRaycastManager raycastManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private Transform highlight;
+    private Vector2 touchPosition;
 
     private void Awake() {
         planeManager = GetComponent<ARPlaneManager>();
@@ -42,4 +48,25 @@ public class ObjectPlacing : MonoBehaviour
             }
         }
     }
+
+    // private void Update() {
+    //     if(Input.touchCount > 0){
+    //         Touch touch = Input.GetTouch(0);
+    //         touchPosition = touch.position;
+    //         if (touch.phase == TouchPhase.Began){
+    //             Ray ray = arCamera.ScreenPointToRay(touch.position);
+    //             RaycastHit hitObject;
+    //             if (Physics.Raycast(ray, out hitObject)){
+    //                 highlight = hitObject.transform;
+    //                 if (highlight.CompareTag("selectable")){
+    //                     Outline outline = highlight.AddComponent<Outline>();
+    //                     outline.enabled = true;
+    //                     highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.magenta;
+    //                     highlight.gameObject.GetComponent<Outline>().OutlineWidth = 5.0f;
+    //                 }
+
+    //             }
+    //         }
+    //     }
+    // }
 }
